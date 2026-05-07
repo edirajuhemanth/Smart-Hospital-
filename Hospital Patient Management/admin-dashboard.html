@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Health Care Hospitals</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="text-decoration-none text-primary fw-bold fs-4">
+                    <i class="fas fa-hospital-user me-2"></i>Health Care Hospitals
+                </a>
+            </div>
+            <ul class="nav flex-column mt-3 flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user-md"></i> Doctors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-users"></i> Patients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-calendar-alt"></i> Appointments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-procedures"></i> Bed Allotment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+            </ul>
+            <div class="mt-auto p-3">
+                <a href="login.html" class="btn btn-outline-danger w-100"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="fw-bold mb-0">Admin Overview</h2>
+                    <p class="text-muted">Hospital Performance & Management</p>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <button class="btn btn-light rounded-circle p-2 position-relative" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 mt-2">
+                            <li><a class="dropdown-item py-2" href="#">System update scheduled</a></li>
+                            <li><a class="dropdown-item py-2" href="#">New doctor registration</a></li>
+                        </ul>
+                    </div>
+                    <img src="https://ui-avatars.com/api/?name=System+Admin&background=212529&color=fff" alt="Profile" class="rounded-circle ms-3" width="45">
+                </div>
+            </div>
+
+            <!-- Stat Cards -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-details">
+                            <p>Total Patients</p>
+                            <h3>1,245</h3>
+                        </div>
+                        <div class="stat-icon blue">
+                            <i class="fas fa-hospital-user"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-details">
+                            <p>Total Doctors</p>
+                            <h3>85</h3>
+                        </div>
+                        <div class="stat-icon green">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-details">
+                            <p>Appointments Today</p>
+                            <h3>142</h3>
+                        </div>
+                        <div class="stat-icon yellow">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-details">
+                            <p>Available Beds</p>
+                            <h3>24</h3>
+                        </div>
+                        <div class="stat-icon red">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="card-title fw-bold mb-0">Recent Doctor Activity</h5>
+                                <button class="btn btn-sm btn-outline-primary">View All</button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>Doctor Name</th>
+                                            <th>Department</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://ui-avatars.com/api/?name=Dr+Swapna&background=f8f9fa" class="rounded-circle me-2" width="35">
+                                                    <div>
+                                                        <span class="d-block fw-medium">Dr. Swapna</span>
+                                                        <small class="text-muted">ID: #DOC-102</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Cardiology</td>
+                                            <td><span class="badge bg-success">On Duty</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light"><i class="fas fa-edit text-primary"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://ui-avatars.com/api/?name=Dr+Raghu+Kumar&background=f8f9fa" class="rounded-circle me-2" width="35">
+                                                    <div>
+                                                        <span class="d-block fw-medium">Dr. Raghu Kumar</span>
+                                                        <small class="text-muted">ID: #DOC-088</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Neurology</td>
+                                            <td><span class="badge bg-warning text-dark">In Surgery</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light"><i class="fas fa-edit text-primary"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="https://ui-avatars.com/api/?name=Dr+Nasra+Fatima&background=f8f9fa" class="rounded-circle me-2" width="35">
+                                                    <div>
+                                                        <span class="d-block fw-medium">Dr. Nasra Fatima</span>
+                                                        <small class="text-muted">ID: #DOC-145</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>General Medicine</td>
+                                            <td><span class="badge bg-secondary">Off Duty</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-light"><i class="fas fa-edit text-primary"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold mb-4">Department Load</h5>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="fw-medium text-muted">Cardiology</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="fw-medium text-muted">Neurology</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="fw-medium text-muted">Pediatrics</span>
+                                    <span>45%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="fw-medium text-muted">Orthopedics</span>
+                                    <span>30%</span>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>

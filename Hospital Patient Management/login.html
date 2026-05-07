@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care Hospitals - Login / Register</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Threads Background -->
+    <div id="threads-container"></div>
+
+    <!-- Back to Home -->
+    <div class="position-absolute top-0 start-0 p-4" style="z-index: 10;">
+        <a href="index.html" class="text-decoration-none text-muted fw-bold bg-white px-3 py-2 rounded-pill shadow-sm" style="opacity: 0.9;">
+            <i class="fas fa-arrow-left me-2"></i>Back to Home
+        </a>
+    </div>
+
+    <div class="auth-container">
+        <!-- Login Form -->
+        <div class="auth-card" id="login-form">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-white"><i class="fas fa-hospital-user me-2 text-primary"></i>Welcome Back</h2>
+                <p class="text-white-50">Sign in to your account</p>
+            </div>
+            
+            <form id="loginFormElement">
+                <div class="mb-3">
+                    <label for="login-email" class="form-label fw-medium text-white">Email address</label>
+                    <input type="email" class="form-control glass-input" id="login-email" placeholder="name@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <label for="login-password" class="form-label fw-medium text-white">Password</label>
+                        <a href="#" class="text-decoration-none small text-primary">Forgot password?</a>
+                    </div>
+                    <input type="password" class="form-control glass-input" id="login-password" placeholder="••••••••" required>
+                </div>
+                <div class="mb-4">
+                    <label for="login-role" class="form-label fw-medium text-white">Login As</label>
+                    <select class="form-select glass-input" id="login-role" required>
+                        <option value="patient" selected>Patient</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+                <div class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="remember-me">
+                    <label class="form-check-label text-white-50" for="remember-me">Remember me for 30 days</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-3 btn-lg fw-bold" id="login-submit">Sign In</button>
+            </form>
+            
+            <div class="text-center mt-4">
+                <p class="text-white-50">Don't have an account? <a href="#" class="text-primary text-decoration-none fw-bold toggle-form" data-target="register">Register here</a></p>
+            </div>
+        </div>
+
+        <!-- Register Form (Hidden by default) -->
+        <div class="auth-card d-none" id="register-form">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-white"><i class="fas fa-user-plus me-2 text-primary"></i>Create Account</h2>
+                <p class="text-white-50">Join our healthcare platform</p>
+            </div>
+            
+            <form>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-medium text-white">First Name</label>
+                        <input type="text" class="form-control glass-input" placeholder="Prashanth" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-medium text-white">Last Name</label>
+                        <input type="text" class="form-control glass-input" placeholder="Sagar" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-medium text-white">Email address</label>
+                    <input type="email" class="form-control glass-input" placeholder="name@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-medium text-white">Password</label>
+                    <input type="password" class="form-control glass-input" placeholder="Create a password" required>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label fw-medium text-white">Register As</label>
+                    <select class="form-select glass-input" required>
+                        <option value="patient" selected>Patient</option>
+                        <option value="doctor">Doctor</option>
+                    </select>
+                    <div class="form-text text-white-50">Admins are created by the system.</div>
+                </div>
+                <div class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label text-white-50 small" for="terms">I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-3 btn-lg fw-bold">Register Account</button>
+            </form>
+            
+            <div class="text-center mt-4">
+                <p class="text-white-50">Already have an account? <a href="#" class="text-primary text-decoration-none fw-bold toggle-form" data-target="login">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+    <!-- Background Animation JS -->
+    <script type="module" src="js/threads.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</body>
+</html>
